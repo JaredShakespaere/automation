@@ -35,8 +35,32 @@ test('I can search Google', async () => {
     await driver.findElement(By.name("q")).clear() 
 
     // Let's do another search!
-    
+
     await searchBar.sendKeys('Boston Red Sox\n')
+
+    await driver.sleep(2000)
+
+    searchBar = await driver.findElement(By.name("q"))
+
+    await driver.findElement(By.name("q")).clear() 
+
+    await searchBar.sendKeys('Shutter Island\n')
+
+    await driver.sleep(2000)
+
+    searchBar = await driver.findElement(By.name("q"))
+
+    await driver.findElement(By.name("q")).clear() 
+
+    await searchBar.sendKeys('Now You See Me\n')
+
+    await driver.sleep(2000)
+
+    searchBar = await driver.findElement(By.name("q"))
+
+    await driver.findElement(By.name("q")).clear() 
+
+    await searchBar.sendKeys('Only Murderers in the Building\n')
 
     await driver.sleep(2000)
 
