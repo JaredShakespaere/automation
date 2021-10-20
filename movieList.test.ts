@@ -19,12 +19,23 @@ afterAll(async () => {
 
 test('I can add a movie to a page', async () => {
     
-    let searchBar = await driver.findElement(By.xpath('//input')).getText()
-    
     await driver.findElement(By.xpath('//input')).sendKeys('Now You See Me\n')
 
-    // await searchBar.sendKeys('Houston Astros\n')
+    await driver.sleep(2000)
+
+    await driver.findElement(By.xpath('//input')).sendKeys('Shutter Island\n')
 
     await driver.sleep(2000)
+
+    await driver.findElement(By.xpath('//input')).sendKeys('Inception\n')
+
+    await driver.sleep(2000)
+
+    await driver.findElement(By.id('ShutterIsland')).
+
+    await driver.sleep(2000)
+
+
+
 })
 
